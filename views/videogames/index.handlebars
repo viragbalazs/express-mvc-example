@@ -1,0 +1,40 @@
+
+<html>
+<head>
+ 
+<style>
+  body {
+background-color:whitesmoke;
+  }
+  table {
+   margin-top: 20%;
+  }
+</style>
+</head>
+<body>
+  
+  <table class="table table-striped table-dark">
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Distributor</th>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+    </tr>
+    </thead>
+    <tbody>
+{{#each videogames}}
+  <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{distributor}}</td>
+      <td>{{name}}</td>
+      <td>{{type}}</td>
+  <td><a href="/videogames/{{id}}" class="btn btn-light">Show</a></td>
+  <td><a href="/videogames/{{id}}/edit" class="btn btn-dark">Edit</a></td>
+  <td><a href="/videogames/{{id}}?_method=DELETE" class="btn btn-light">Megsemmisít</a></td>
+  </tr>
+{{/each}}
+</tbody>
+</table>
+</html>
